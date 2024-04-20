@@ -83,7 +83,7 @@ public class QuizApplication {
 
             System.out.println("-----------------");
         }
-        System.out.println("Your final scoreis" + score + "/" + totalQuestions);
+        System.out.println("Your final score is" + score + "/" + totalQuestions);
         sc.close();
     }
 }
