@@ -90,10 +90,12 @@ class Student {
     }
 }
 
-public class CourseRegistrationSystem {
+public class StudentCourseRegistrationSystem {
     public static void main(String[] args) {
-        Course javaCourse = new Course("CS101", "Java Programming", "Introduction to Java programming language", 20, "Monday 10:00 AM");
-        Course pythonCourse = new Course("CS102", "Python Programming", "Introduction to Python programming language", 15, "Wednesday 2:00 PM");
+        Course javaCourse = new Course("CS101", "Java Programming", "Introduction to Java programming language", 20,
+                "Monday 10:00 AM");
+        Course pythonCourse = new Course("CS102", "Python Programming", "Introduction to Python programming language",
+                15, "Wednesday 2:00 PM");
 
         List<Course> availableCourses = new ArrayList<>();
         availableCourses.add(javaCourse);
@@ -107,7 +109,7 @@ public class CourseRegistrationSystem {
             System.out.println("Title: " + course.getTitle());
             System.out.println("Description: " + course.getDescription());
             System.out.println("Schedule: " + course.getSchedule());
-            System.out.println("Available Slots: " + course.getAvailableSlots());
+            System.out.println("Available Slots: " + course.getavailableSlots());
             System.out.println("--------------------");
         }
 
