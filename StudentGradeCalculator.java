@@ -11,37 +11,31 @@ public class StudentGradeCalculator {
 
         // Input marks of each subject and calculate total marks
         for (int i = 1; i <= n; i++) {
-            System.out.println("Enter marks of subject" + i + ":");
+            System.out.println("Enter marks obtained in each subject" + i + ":");
             int subjectmarks = sc.nextInt();
-            subjectmarks = subjectmarks + i;
-            totalmarks = +subjectmarks;
+            totalmarks += subjectmarks;
         }
 
         // Calculate avg percentage
-        double avgPercentage = (double) totalmarks / n;
+        double averagePercentage = (double) totalmarks / (n * 100.0) * 100.0;
 
         // Calculate Grade
-        char grade = calculateGrade(avgPercentage);
-
-        System.out.println("Results:");
-        System.out.println("Totalmarks:" + totalmarks);
-        System.out.println("Average Percentage:" + avgPercentage);
-        System.out.println("Grade is:" + grade);
-
-        sc.close();
-    }
-
-    public static char calculateGrade(double avgPercentage) {
-        if (avgPercentage >= 90)
-            System.out.println("Grade A");
-        else if (avgPercentage >= 80 && avgPercentage < 90)
-            System.out.println("Grade B");
-        else if (avgPercentage >= 70 && avgPercentage < 80)
-            System.out.println("Grade C");
-        else if (avgPercentage >= 60 || avgPercentage < 70)
-            System.out.println("Grade D");
+        String grade;
+        if (averagePercentage >= 90)
+            grade = "Grade A";
+        else if (averagePercentage >= 80 && averagePercentage < 90)
+            grade = "Grade B";
+        else if (averagePercentage >= 70 && averagePercentage < 80)
+            grade = "Grade C";
+        else if (averagePercentage >= 60 || averagePercentage < 70)
+            grade = "Grade D";
         else
-            System.out.println("FAIL");
-        return 0;
+            grade = "FAIL";
+
+        System.out.println("Your Results is:");
+        System.out.println("Totalmarks:" + totalmarks);
+        System.out.println("Average Percentage:" + averagePercentage);
+        System.out.println("Grade is:" + grade);
+        sc.close();
     }
 }
